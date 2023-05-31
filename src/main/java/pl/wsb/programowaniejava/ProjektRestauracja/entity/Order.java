@@ -30,6 +30,4 @@ public class Order {
 
     @Column(name = "price")
     private double price;
-
-
 }

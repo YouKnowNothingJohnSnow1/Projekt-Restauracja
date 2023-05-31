@@ -25,7 +25,7 @@ public class Employee {
 
 
     @OneToMany
-    @JoinColumn(name = "employees")
+    @JoinColumn(name = "employeeId")
     private List<Order> orders;
 
 }

@@ -9,16 +9,9 @@ import java.util.List;
 @Repository
 public interface OrderCrudRepository extends JpaRepository<Order, Long> {
 
-
     List<Order> findAllByOrderId();
-
     List<Order> findAllByMenuCategory();
-
     List<Order> findAllByMenuName();
-
     List<Order> findAllByMenuDescription();
-
     List<Order> findAllByPrice();
-
-
 }

@@ -10,11 +10,6 @@ import java.util.Optional;
 @Repository
 public interface EmployeeCrudRepository extends JpaRepository<Employee, Long> {
 
-    List<Employee> findAllByEmployeeId();
-
-    Optional<Employee> findAllByEmployeeId(Long employeeId);
-
-    Optional<Employee> findByEmployeeId();
-
-
+    Optional<Employee> findByEmployeeId(Long employeeId);
+    List<Employee> findByEmployeeId();
 }

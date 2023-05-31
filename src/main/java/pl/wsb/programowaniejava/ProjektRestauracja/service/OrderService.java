@@ -11,11 +11,8 @@ import java.util.Optional;
 
 @Service
 public class OrderService {
-
-
     @Autowired
     private OrderCrudRepository orderCrudRepository;
-
     @Autowired
     private final List<Order> orders = new ArrayList<>();
 
@@ -29,7 +26,6 @@ public class OrderService {
                 .build();
                 return orderCrudRepository.save(order);
     }
-
     public Optional<Order> getOrder(Order employeeId) {
         return orderCrudRepository.findById(employeeId.getOrderId());
     }
@@ -49,7 +45,6 @@ public class OrderService {
             return orderCrudRepository.findAll();
         }
     }
-
     public Optional<Order> updateOrder(Long orderId,String menuCategory, String manuName,
                                        String menuDescription, double price){
         Order order = Order.builder()
@@ -61,13 +56,7 @@ public class OrderService {
                 .build();
         return orderCrudRepository
                 .findById(orderId)
-                .map(saveOrder -> orderCrudRepository.save(order));
-    }
-
+                .map(saveOrder -> orderCrudRepository.save(order));}
     public void deleteOrder(long id){
         orders.removeIf(order -> order.getOrderId() == id);
-    }
-
-
-
-}
+    }}
